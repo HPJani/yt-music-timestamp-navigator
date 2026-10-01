@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Music-Skip to the Good Part",
+  "description": "Bookmark timestamps to the favorite parts of your songs on YouTube Music and skip to those parts directly.",
+  "version": "1.0",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://music.youtube.com/*"],
+      "css": ["styles.css"],
+      "js": ["content-script.js"]
+    },
+    {
+      "matches": ["https://music.youtube.com/*"],
+      "js": ["main-world-script.js"],
+      "world": "MAIN"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Skip to the Good Part"
+  },
+  "permissions": ["activeTab", "storage"]
+}

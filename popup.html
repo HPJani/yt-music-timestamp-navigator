@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="popup-header">
+      <img src="icon48.png" alt="logo">
+      <h1>Skip to the Good Part</h1>
+    </div>
+
+      <button id="add-btn" class="action-btn">
+    <span>Add Timestamp</span>
+    <kbd class="shortcut-badge">Alt+S</kbd>
+  </button>
+
+  <button id="jump-btn" class="action-btn">
+    <span>Jump to Next Part</span>
+    <kbd class="shortcut-badge">Alt+J</kbd>
+  </button>
+
+  <button id="edit-btn" class="action-btn">
+    <span>Edit Timestamps</span>
+  </button>
+
+<p class="footer-hint">PS: Use shortcut keys for ease instead of opening the popup again and again</p>
+
+    <p id="status-msg" class="status-msg"></p>
+
+    <div id="timestamp-list" class="timestamp-list hidden"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
